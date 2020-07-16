@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #e9e5e0;
+}
+
+/* *********** */
+/** CALCULATOR */
+/* *********** */
+.calculator {
+  display: grid;
+  position: relative;
+  margin: auto;
+  margin-top: 5rem;
+  width: 28.8rem;
+  height: 41.6rem;
+  grid: 5rem 7rem repeat(5, 4.6rem) / repeat(4, 5.2rem);
+  border: 1px solid black;
+  gap: 0.6rem 0.8rem;
+  justify-content: center;
+  align-content: top;
+  grid-template-areas:
+    'text text text text'
+    'display display display display'
+    'clear backspace negate divide'
+    'btn1 btn2 btn3 multiply'
+    'btn4 btn5 btn6 substract'
+    'btn7 btn8 btn9 add'
+    'btn0 btn0 decimal equal'
+  ;
+  background-color: #dfd8d0;
+  box-shadow: 5px 5px 8px 4px #646464, inset -4px -4px 10px 2px #646464;
+  border-radius: 12px;
+}
+
+/* ********* */
+/** TOP TEXT */
+/* ********* */
+.top-text {
+  grid-area: text;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 1.6rem;
+  margin-top: 0.3rem;
+}
+
+/* ******** */
+/** DISPLAY */
+/* ******** */
+.display {
+  grid-area: display;
+  font-size: 3rem;
+  border: 2px solid #b4b39c;
+  text-align: right;
+  line-height: 7rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #c3c2aa;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ************* */
+/** ALL BUTTONS **/
+/* ************* */
+.calculator button {
+  width: 5.2rem;
+  height: 4.4rem;
+  cursor: pointer;
+  color: white;
+  background-color: #3a3a3a;
+  font-family: inherit;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 2px 1px 1px #3a3a3a;
+  text-decoration: none;
+  font-size: 1.6rem;
+  align-self: start;
+}
+
+.calculator button:focus {
+  outline: none;
+}
+
+/** CLEAR */
+#clear {
+  grid-area: clear;
+  background-color: #a72d45;
+}
+
+/** BACKSPACE */
+#backspace {
+  grid-area: backspace;
+  background-color: #a72d45;
+}
+
+/** NEGATE */
+.negate {
+  grid-area: negate;
+}
+
+/** DIGITS */
+#btn1 {
+  grid-area: btn1;
+}
+
+#btn2 {
+  grid-area: btn2;
+}
+
+#btn3 {
+  grid-area: btn3;
+}
+
+#btn4 {
+  grid-area: btn4;
+}
+
+#btn5 {
+  grid-area: btn5;
+}
+
+#btn6 {
+  grid-area: btn6;
+}
+
+#btn7 {
+  grid-area: btn7;
+}
+
+#btn8 {
+  grid-area: btn8;
+}
+
+#btn9 {
+  grid-area: btn9;
+}
+
+#btn0 {
+  grid-area: btn0;
+  width: 11.2rem;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+/** FUNCTIONS */
+#add {
+  grid-area: add;
+  font-size: 2rem;
+}
+
+#substract {
+  grid-area: substract;
+  font-size: 2rem;
+}
+
+#multiply {
+  grid-area: multiply;
+  font-size: 2rem;
+}
+
+#divide {
+  grid-area: divide;
+  font-size: 2rem;
+}
+
+/** EQUAL*/
+.equal {
+  grid-area: equal;
+}
+
+/* - Style alert messages */
+/* - Make the text small or on another line when there's too many numbers */
